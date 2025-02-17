@@ -546,7 +546,7 @@
       "path": "motivated-scatterplot-1b/assets/q8.md",
       "response": [
         {
-          "id": "q5-response",
+          "id": "q8-response",
           "prompt": "How correlated do you think the data looks?",
           "required": true,
           "location": "belowStimulus",
@@ -713,7 +713,7 @@
         },
         {
           "id": "belief-q2",
-          "prompt": "I believe that as the number of households with guns increases, the numberof instances in which violent crime is prevented increases",
+          "prompt": "I believe that as the number of households with guns increases, the number of instances in which violent crime is prevented increases",
           "required": true,
           "location": "belowStimulus",
           "type": "radio",
@@ -746,22 +746,6 @@
         {
           "id": "belief-q4",
           "prompt": "I believe that as the number of environmental regulations increases, the unemployment percentage in manufacturing/industry jobs increases",
-          "required": true,
-          "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
-        },
-        {
-          "id": "belief-q5",
-          "prompt": "I believe that as the number of people whose names begin with “T” in a neighborhood increases, the number of trees in the same neighborhood increases",
           "required": true,
           "location": "belowStimulus",
           "type": "radio",
