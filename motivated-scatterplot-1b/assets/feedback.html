@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Correlation Estimation</title>
+  <style>
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    .scatterplot {
+      max-width: 100%;
+      margin-bottom: 1em;
+    }
+    .feedback {
+      margin-top: 1em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Placeholder scatterplot image -->
+  <img 
+    src="placeholder_scatterplot.png" 
+    alt="Scatterplot" 
+    class="scatterplot"
+  />
+
+  <!-- Prompt -->
+  <p>How correlated do you think the data looks? (0 = no correlation, 1 = perfect correlation)</p>
+
+  <!-- Slider -->
+  <input 
+    type="range" 
+    id="correlation-slider" 
+    name="correlation-slider" 
+    min="0" 
+    max="1" 
+    step="0.1" 
+    value="0.5"
+    style="width: 80%;"
+  />
+  <div>Selected value: <span id="slider-value">0.5</span></div>
+
+  <!-- Submit button -->
+  <button id="submit-button" style="margin-top: 1em;">Submit</button>
+
+  <!-- Feedback container -->
+  <div id="feedback" class="feedback"></div>
+
+</div>
+
+<script>
+  // If you are running this inside a reVISit environment, window.RevisIT will be available
+  // Otherwise, this won't throw an error but simply won't record data
+
+  const correctCorrelation = 0.7;
+  const slider = document.getElementById("correlation-slider");
+  const sliderValue = document.getElementById("slider-value");
+  const feedback = document.getElementById("feedback");
+  const submitButton = document.getElementById("submit-button");
+
+  // Update displayed slider value in real time
+  slider.addEventListener("input", function() {
+    sliderValue.textContent = slider.value;
+  });
+
+  // When the participant submits their answer
+  submitButton.addEventListener("click", function() {
+    const userValue = parseFloat(slider.value);
+    let message = "";
+
+    // Simple logic to show different feedback based on userValue
+    if (Math.abs(userValue - correctCorrelation) < 0.05) {
+      message = "Correct! The correlation of the data is 0.7. This is a positive correlation.";
+    } else if (userValue > correctCorrelation) {
+      message = "As one variable increases, so does the other. This is a positive correlation, but it is a weaker correlation than what you selected, with the correct value being 0.7.";
+    } else if (userValue === 0) {
+      message = "As one variable increases, so does the other. This suggests a positive correlation and means that the correlation cannot be 0, as there is a relationship between the two variables. It is a stronger correlation than what you selected, with the correlation being 0.7.";
+    } else {
+      message = "As one variable increases, so does the other. This is a positive correlation, but it is a stronger correlation than what you selected, with the correct value being 0.7.";
+    }
+
+    feedback.textContent = message;
+
+    // Record the participant's slider value in reVISit data
+    if (window.RevisIT && typeof window.RevisIT.record === 'function') {
+      window.RevisIT.record('correlationGuess', userValue);
+    }
+  });
+</script>
+</body>
+</html>

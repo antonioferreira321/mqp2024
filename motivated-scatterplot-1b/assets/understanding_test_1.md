@@ -1,1 +1,1 @@
-<img src="./assets/0.7_training.png" width="auto" height="300px">
+<img src="./assets/0.7_training.png" width="50vw" height="auto">
