@@ -6,8 +6,8 @@
     "authors": [
       "MQP 2024 reVISit team"
     ],
-    "date": "2023-11-03",
-    "description": "Replication of the study 'Motivated Scatterplots'",
+    "date": "2025-02-21",
+    "description": "Replication of the study 'Seeing What You Believe or Believing What You See? Belief Biases Correlation Estimation'",
     "organizations": [
       "WPI"
     ]
@@ -39,10 +39,12 @@
       "response": [
         {
           "id": "confirmationClick",
-          "prompt": "Please type your name and click next to continue to the survey.",
+          "prompt": "Please confirm that you agree to take the survey:",
           "required": true,
           "location": "belowStimulus",
-          "type": "shortText"
+          "type": "checkbox",
+          "options": ["I agree"],
+          "minSelections": 1
         }
       ]
     },
@@ -70,9 +72,10 @@
       "nextButtonText": "Next",
       "response": [
         {
-          "id": "correlationQuestion",
+          "id": "correlationQuestion_0",
           "prompt": "Compare the two correlations seen above. Which is stronger?",
           "required": true,
+          
           "type": "radio",
           "options": [
             "Correlation: 0.3",
@@ -86,24 +89,59 @@
       "type": "markdown",
       "path": "motivated-scatterplot-1b/assets/understanding_test_1.md",
       "nextButtonText": "Next",
+      "responseDividers": true,
       "response": [
         {
-          "id": "correlationQuestion",
-          "prompt": "How correlated do you think the data looks?",
+          "id": "correlationQuestion_1",
+          "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "type": "radio",
+          "location":"belowStimulus",
+          "type": "slider",
           "options": [
-            "0",
-            "0.1",
-            "0.2",
-            "0.3",
-            "0.4",
-            "0.5",
-            "0.6",
-            "0.7",
-            "0.8",
-            "0.9",
-            "1"
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "0.1",
+              "value": 1
+            },
+            {
+              "label": "0.2",
+              "value": 2
+            },
+            {
+              "label": "0.3",
+              "value": 3
+            },
+            {
+              "label": "0.4",
+              "value": 4
+            },
+            {
+              "label": "0.5",
+              "value": 5
+            },
+            {
+              "label": "0.6",
+              "value": 6
+            },
+            {
+              "label": "0.7",
+              "value": 7
+            },
+            {
+              "label": "0.8",
+              "value": 8
+            },
+            {
+              "label": "0.9",
+              "value": 9
+            },
+            {
+              "label": "1",
+              "value": 10
+            }
           ]
         }
       ]
@@ -114,22 +152,56 @@
       "nextButtonText": "Next",
       "response": [
         {
-          "id": "correlationQuestion",
-          "prompt": "How correlated do you think the data looks?",
+          "id": "correlationQuestion_2",
+          "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "type": "radio",
+          "location":"belowStimulus",
+          "type": "slider",
           "options": [
-            "-1",
-            "-0.9",
-            "-0.8",
-            "-0.7",
-            "-0.6",
-            "-0.5",
-            "-0.4",
-            "-0.3",
-            "-0.2",
-            "-0.1",
-            "0"
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "0.1",
+              "value": 1
+            },
+            {
+              "label": "0.2",
+              "value": 2
+            },
+            {
+              "label": "0.3",
+              "value": 3
+            },
+            {
+              "label": "0.4",
+              "value": 4
+            },
+            {
+              "label": "0.5",
+              "value": 5
+            },
+            {
+              "label": "0.6",
+              "value": 6
+            },
+            {
+              "label": "0.7",
+              "value": 7
+            },
+            {
+              "label": "0.8",
+              "value": 8
+            },
+            {
+              "label": "0.9",
+              "value": 9
+            },
+            {
+              "label": "1",
+              "value": 10
+            }
           ]
         }
       ]
@@ -140,22 +212,56 @@
       "nextButtonText": "Next",
       "response": [
         {
-          "id": "correlationQuestion",
-          "prompt": "How correlated do you think the data looks?",
+          "id": "correlationQuestion_3",
+          "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "type": "radio",
+          "location":"belowStimulus",
+          "type": "slider",
           "options": [
-            "-1",
-            "-0.9",
-            "-0.8",
-            "-0.7",
-            "-0.6",
-            "-0.5",
-            "-0.4",
-            "-0.3",
-            "-0.2",
-            "-0.1",
-            "0"
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "0.1",
+              "value": 1
+            },
+            {
+              "label": "0.2",
+              "value": 2
+            },
+            {
+              "label": "0.3",
+              "value": 3
+            },
+            {
+              "label": "0.4",
+              "value": 4
+            },
+            {
+              "label": "0.5",
+              "value": 5
+            },
+            {
+              "label": "0.6",
+              "value": 6
+            },
+            {
+              "label": "0.7",
+              "value": 7
+            },
+            {
+              "label": "0.8",
+              "value": 8
+            },
+            {
+              "label": "0.9",
+              "value": 9
+            },
+            {
+              "label": "1",
+              "value": 10
+            }
           ]
         }
       ]
@@ -183,48 +289,114 @@
       "response": [
         {
           "id": "q1-response",
-          "prompt": "How correlated do you think the data looks?",
+          "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location": "belowStimulus",
-          "type": "radio",
+          "location":"belowStimulus",
+          "type": "slider",
           "options": [
-            "0",
-            "0.1",
-            "0.2",
-            "0.3",
-            "0.4",
-            "0.5",
-            "0.6",
-            "0.7",
-            "0.8",
-            "0.9",
-            "1"
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "0.1",
+              "value": 1
+            },
+            {
+              "label": "0.2",
+              "value": 2
+            },
+            {
+              "label": "0.3",
+              "value": 3
+            },
+            {
+              "label": "0.4",
+              "value": 4
+            },
+            {
+              "label": "0.5",
+              "value": 5
+            },
+            {
+              "label": "0.6",
+              "value": 6
+            },
+            {
+              "label": "0.7",
+              "value": 7
+            },
+            {
+              "label": "0.8",
+              "value": 8
+            },
+            {
+              "label": "0.9",
+              "value": 9
+            },
+            {
+              "label": "1",
+              "value": 10
+            }
           ]
         }
       ]
     },
     "q2": {
       "type": "markdown",
-      "path": "motivated-scatterplot-1b/assets/q1.md",
+      "path": "motivated-scatterplot-1b/assets/q2.md",
       "response": [
         {
           "id": "q2-response",
-          "prompt": "How correlated do you think the data looks?",
+          "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location": "belowStimulus",
-          "type": "radio",
+          "location":"belowStimulus",
+          "type": "slider",
           "options": [
-            "0",
-            "0.1",
-            "0.2",
-            "0.3",
-            "0.4",
-            "0.5",
-            "0.6",
-            "0.7",
-            "0.8",
-            "0.9",
-            "1"
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "0.1",
+              "value": 1
+            },
+            {
+              "label": "0.2",
+              "value": 2
+            },
+            {
+              "label": "0.3",
+              "value": 3
+            },
+            {
+              "label": "0.4",
+              "value": 4
+            },
+            {
+              "label": "0.5",
+              "value": 5
+            },
+            {
+              "label": "0.6",
+              "value": 6
+            },
+            {
+              "label": "0.7",
+              "value": 7
+            },
+            {
+              "label": "0.8",
+              "value": 8
+            },
+            {
+              "label": "0.9",
+              "value": 9
+            },
+            {
+              "label": "1",
+              "value": 10
+            }
           ]
         }
       ]
@@ -235,22 +407,55 @@
       "response": [
         {
           "id": "q3-response",
-          "prompt": "How correlated do you think the data looks?",
+          "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location": "belowStimulus",
-          "type": "radio",
+          "location":"belowStimulus",
+          "type": "slider",
           "options": [
-            "0",
-            "0.1",
-            "0.2",
-            "0.3",
-            "0.4",
-            "0.5",
-            "0.6",
-            "0.7",
-            "0.8",
-            "0.9",
-            "1"
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "0.1",
+              "value": 1
+            },
+            {
+              "label": "0.2",
+              "value": 2
+            },
+            {
+              "label": "0.3",
+              "value": 3
+            },
+            {
+              "label": "0.4",
+              "value": 4
+            },
+            {
+              "label": "0.5",
+              "value": 5
+            },
+            {
+              "label": "0.6",
+              "value": 6
+            },
+            {
+              "label": "0.7",
+              "value": 7
+            },
+            {
+              "label": "0.8",
+              "value": 8
+            },
+            {
+              "label": "0.9",
+              "value": 9
+            },
+            {
+              "label": "1",
+              "value": 10
+            }
           ]
         }
       ]
@@ -261,22 +466,55 @@
       "response": [
         {
           "id": "q4-response",
-          "prompt": "How correlated do you think the data looks?",
+          "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location": "belowStimulus",
-          "type": "radio",
+          "location":"belowStimulus",
+          "type": "slider",
           "options": [
-            "0",
-            "0.1",
-            "0.2",
-            "0.3",
-            "0.4",
-            "0.5",
-            "0.6",
-            "0.7",
-            "0.8",
-            "0.9",
-            "1"
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "0.1",
+              "value": 1
+            },
+            {
+              "label": "0.2",
+              "value": 2
+            },
+            {
+              "label": "0.3",
+              "value": 3
+            },
+            {
+              "label": "0.4",
+              "value": 4
+            },
+            {
+              "label": "0.5",
+              "value": 5
+            },
+            {
+              "label": "0.6",
+              "value": 6
+            },
+            {
+              "label": "0.7",
+              "value": 7
+            },
+            {
+              "label": "0.8",
+              "value": 8
+            },
+            {
+              "label": "0.9",
+              "value": 9
+            },
+            {
+              "label": "1",
+              "value": 10
+            }
           ]
         }
       ]
@@ -469,22 +707,55 @@
       "response": [
         {
           "id": "q5-response",
-          "prompt": "How correlated do you think the data looks?",
+          "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location": "belowStimulus",
-          "type": "radio",
+          "location":"belowStimulus",
+          "type": "slider",
           "options": [
-            "0",
-            "0.1",
-            "0.2",
-            "0.3",
-            "0.4",
-            "0.5",
-            "0.6",
-            "0.7",
-            "0.8",
-            "0.9",
-            "1"
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "0.1",
+              "value": 1
+            },
+            {
+              "label": "0.2",
+              "value": 2
+            },
+            {
+              "label": "0.3",
+              "value": 3
+            },
+            {
+              "label": "0.4",
+              "value": 4
+            },
+            {
+              "label": "0.5",
+              "value": 5
+            },
+            {
+              "label": "0.6",
+              "value": 6
+            },
+            {
+              "label": "0.7",
+              "value": 7
+            },
+            {
+              "label": "0.8",
+              "value": 8
+            },
+            {
+              "label": "0.9",
+              "value": 9
+            },
+            {
+              "label": "1",
+              "value": 10
+            }
           ]
         }
       ]
@@ -495,22 +766,55 @@
       "response": [
         {
           "id": "q6-response",
-          "prompt": "How correlated do you think the data looks?",
+          "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location": "belowStimulus",
-          "type": "radio",
+          "location":"belowStimulus",
+          "type": "slider",
           "options": [
-            "0",
-            "0.1",
-            "0.2",
-            "0.3",
-            "0.4",
-            "0.5",
-            "0.6",
-            "0.7",
-            "0.8",
-            "0.9",
-            "1"
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "0.1",
+              "value": 1
+            },
+            {
+              "label": "0.2",
+              "value": 2
+            },
+            {
+              "label": "0.3",
+              "value": 3
+            },
+            {
+              "label": "0.4",
+              "value": 4
+            },
+            {
+              "label": "0.5",
+              "value": 5
+            },
+            {
+              "label": "0.6",
+              "value": 6
+            },
+            {
+              "label": "0.7",
+              "value": 7
+            },
+            {
+              "label": "0.8",
+              "value": 8
+            },
+            {
+              "label": "0.9",
+              "value": 9
+            },
+            {
+              "label": "1",
+              "value": 10
+            }
           ]
         }
       ]
@@ -521,22 +825,55 @@
       "response": [
         {
           "id": "q7-response",
-          "prompt": "How correlated do you think the data looks?",
+          "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location": "belowStimulus",
-          "type": "radio",
+          "location":"belowStimulus",
+          "type": "slider",
           "options": [
-            "0",
-            "0.1",
-            "0.2",
-            "0.3",
-            "0.4",
-            "0.5",
-            "0.6",
-            "0.7",
-            "0.8",
-            "0.9",
-            "1"
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "0.1",
+              "value": 1
+            },
+            {
+              "label": "0.2",
+              "value": 2
+            },
+            {
+              "label": "0.3",
+              "value": 3
+            },
+            {
+              "label": "0.4",
+              "value": 4
+            },
+            {
+              "label": "0.5",
+              "value": 5
+            },
+            {
+              "label": "0.6",
+              "value": 6
+            },
+            {
+              "label": "0.7",
+              "value": 7
+            },
+            {
+              "label": "0.8",
+              "value": 8
+            },
+            {
+              "label": "0.9",
+              "value": 9
+            },
+            {
+              "label": "1",
+              "value": 10
+            }
           ]
         }
       ]
@@ -547,22 +884,55 @@
       "response": [
         {
           "id": "q8-response",
-          "prompt": "How correlated do you think the data looks?",
+          "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location": "belowStimulus",
-          "type": "radio",
+          "location":"belowStimulus",
+          "type": "slider",
           "options": [
-            "0",
-            "0.1",
-            "0.2",
-            "0.3",
-            "0.4",
-            "0.5",
-            "0.6",
-            "0.7",
-            "0.8",
-            "0.9",
-            "1"
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "0.1",
+              "value": 1
+            },
+            {
+              "label": "0.2",
+              "value": 2
+            },
+            {
+              "label": "0.3",
+              "value": 3
+            },
+            {
+              "label": "0.4",
+              "value": 4
+            },
+            {
+              "label": "0.5",
+              "value": 5
+            },
+            {
+              "label": "0.6",
+              "value": 6
+            },
+            {
+              "label": "0.7",
+              "value": 7
+            },
+            {
+              "label": "0.8",
+              "value": 8
+            },
+            {
+              "label": "0.9",
+              "value": 9
+            },
+            {
+              "label": "1",
+              "value": 10
+            }
           ]
         }
       ]
@@ -576,7 +946,9 @@
           "prompt": "What year were you born?",
           "required": true,
           "location": "belowStimulus",
-          "type": "shortText"
+          "type": "numerical",
+          "min": 1900,
+          "max": 2025
         },
         {
           "id": "gender-response",
@@ -615,31 +987,28 @@
           "prompt": "On this 7-point scale of political views from extremely liberal (left) to  extremely conservative (right) where would you place yourself on this scale?",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"
-          ]
+          "type": "likert",
+          "leftLabel": "Extremely Liberal",
+          "rightLabel": "Extremely Conservative",
+          "numItems": 7
         },
         {
           "id": "statistics-response",
           "prompt": "How many years of experiences do you have studying statistics? (enter a number)",
           "required": true,
           "location": "belowStimulus",
-          "type": "shortText"
+          "type": "numerical",
+          "min": 0,
+          "max": 100
         },
         {
           "id": "research-response",
           "prompt": "How many years of experiences do you have doing research? (enter a number)",
           "required": true,
           "location": "belowStimulus",
-          "type": "shortText"
+          "type": "numerical",
+          "min": 0,
+          "max": 100
         },
         {
           "id": "correlation-response",
@@ -666,14 +1035,17 @@
           "prompt": "How many years of experiences do you have studying statistics (e.g. doing experiments in a lab, collecting and analyzing data)? (enter a number)",
           "required": true,
           "location": "belowStimulus",
-          "type": "shortText"
+          "type": "numerical",
+          "min": 0,
+          "max": 100
         },
         {
           "id": "specific-research-response",
           "prompt": "How many years of experiences do you have doing research (e.g. self-taught, taking classes)? (enter a number)",
           "required": true,
-          "location": "belowStimulus",
-          "type": "shortText"
+          "type": "numerical",
+          "min": 0,
+          "max": 100
         },
         {
           "id": "correlation-response",
@@ -700,96 +1072,60 @@
           "prompt": "I believe that as the number of households with guns increases, the number of violent crimes increases",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         },
         {
           "id": "belief-q2",
           "prompt": "I believe that as the number of households with guns increases, the number of instances in which violent crime is prevented increases",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         },
         {
           "id": "belief-q3",
           "prompt": "I believe that as the number of environmental regulations increases, air quality increases",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         },
         {
           "id": "belief-q4",
           "prompt": "I believe that as the number of environmental regulations increases, the unemployment percentage in manufacturing/industry jobs increases",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         },
         {
           "id": "belief-q5",
           "prompt": "I believe that as the number of people whose names begin with “T” in a neighborhood increases, the number of trees in the same neighborhood increases",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         },
         {
           "id": "belief-q6",
           "prompt": "I believe that as the total rainfall in the US increases, the number of US lawyers increases",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         }
       ]
     },
@@ -802,112 +1138,70 @@
           "prompt": "Everyone should have the right to keep and bear arms",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         },
         {
           "id": "support-q2",
           "prompt": "Greater gun restriction laws are necessary to reduce violence",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         },
         {
           "id": "support-q3",
           "prompt": "The right to keep and bear arms is very important to me",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         },
         {
           "id": "support-q4",
           "prompt": "I am in support of gun control laws",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         },
         {
           "id": "support-q5",
           "prompt": "I am not in support of gun control laws",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         },
         {
           "id": "support-q6",
           "prompt": "I am in support of environmental laws that regulate carbon emissions from factories and manufacturers ",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         },
         {
           "id": "support-q7",
           "prompt": "I am not in support of environmental laws that regulate carbon emissions from factories and manufacturers ",
           "required": true,
           "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Strongly disagree",
-            "Disagree",
-            "Somewhat disagree",
-            "Neither agree nor disagree",
-            "Somewhat agree",
-            "Agree",
-            "Strongly agree"
-          ]
+          "type": "likert",
+          "leftLabel": "Strongly Disagree",
+          "rightLabel": "Strongly Agree",
+          "numItems": 7
         }
       ]
     }
