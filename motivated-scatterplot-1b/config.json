@@ -3,14 +3,10 @@
   "studyMetadata": {
     "title": "Motivated Scatterplots",
     "version": "pilot",
-    "authors": [
-      "MQP 2024 reVISit team"
-    ],
+    "authors": ["MQP 2024 reVISit team"],
     "date": "2025-02-21",
     "description": "Replication of the study 'Seeing What You Believe or Believing What You See? Belief Biases Correlation Estimation'",
-    "organizations": [
-      "WPI"
-    ]
+    "organizations": ["WPI"]
   },
   "uiConfig": {
     "contactEmail": "askittur@wpi.edu",
@@ -58,11 +54,7 @@
           "required": true,
           "location": "belowStimulus",
           "type": "radio",
-          "options": [
-            "tables",
-            "graphs",
-            "images"
-          ]
+          "options": ["tables", "graphs", "images"]
         }
       ]
     },
@@ -75,7 +67,6 @@
           "id": "correlationQuestion_0",
           "prompt": "Compare the two correlations seen above. Which is stronger?",
           "required": true,
-          
           "type": "radio",
           "options": [
             "Correlation: 0.3",
@@ -86,65 +77,81 @@
       ]
     },
     "understanding_test_1": {
-      "type": "markdown",
-      "path": "motivated-scatterplot-1b/assets/understanding_test_1.md",
+      "type": "react-component",
+      "path": "motivated-scatterplot-1b/assets/ScatterplotSlider.tsx",
       "nextButtonText": "Next",
-      "responseDividers": true,
       "response": [
         {
+          "type": "reactive",
           "id": "correlationQuestion_1",
-          "prompt": "How correlated do you think the data looks?\n\n",
-          "required": true,
-          "location":"belowStimulus",
-          "type": "slider",
-          "options": [
-            {
-              "label": "0",
-              "value": 0
-            },
-            {
-              "label": "0.1",
-              "value": 1
-            },
-            {
-              "label": "0.2",
-              "value": 2
-            },
-            {
-              "label": "0.3",
-              "value": 3
-            },
-            {
-              "label": "0.4",
-              "value": 4
-            },
-            {
-              "label": "0.5",
-              "value": 5
-            },
-            {
-              "label": "0.6",
-              "value": 6
-            },
-            {
-              "label": "0.7",
-              "value": 7
-            },
-            {
-              "label": "0.8",
-              "value": 8
-            },
-            {
-              "label": "0.9",
-              "value": 9
-            },
-            {
-              "label": "1",
-              "value": 10
-            }
-          ]
+          "location": "sidebar",
+          "prompt": "How correlated do you think the data looks?\n\n"
         }
-      ]
+      ],
+      "parameters": {
+        "taskId": "correlationQuestion_1",
+        "image": "assets/0.7_training.png",
+        "prompt": "How correlated do you think the data looks?",
+        "options": [
+          {
+            "label": "0",
+            "value": 0
+          },
+          {
+            "label": "0.1",
+            "value": 1
+          },
+          {
+            "label": "0.2",
+            "value": 2
+          },
+          {
+            "label": "0.3",
+            "value": 3
+          },
+          {
+            "label": "0.4",
+            "value": 4
+          },
+          {
+            "label": "0.5",
+            "value": 5
+          },
+          {
+            "label": "0.6",
+            "value": 6
+          },
+          {
+            "label": "0.7",
+            "value": 7
+          },
+          {
+            "label": "0.8",
+            "value": 8
+          },
+          {
+            "label": "0.9",
+            "value": 9
+          },
+          {
+            "label": "1",
+            "value": 10
+          }
+        ],
+        "feedback": {
+          "0": "low",
+          "1": "low",
+          "2": "low",
+          "3": "low",
+          "4": "low",
+          "5": "nice!",
+          "6": "high",
+          "7": "high",
+          "8": "high",
+          "9": "high",
+          "10": "high"
+        }
+      }
     },
     "understanding_test_2": {
       "type": "markdown",
@@ -155,7 +162,7 @@
           "id": "correlationQuestion_2",
           "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location":"belowStimulus",
+          "location": "belowStimulus",
           "type": "slider",
           "options": [
             {
@@ -215,7 +222,7 @@
           "id": "correlationQuestion_3",
           "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location":"belowStimulus",
+          "location": "belowStimulus",
           "type": "slider",
           "options": [
             {
@@ -276,10 +283,7 @@
           "required": true,
           "location": "belowStimulus",
           "type": "radio",
-          "options": [
-            "Yes",
-            "No"
-          ]
+          "options": ["Yes", "No"]
         }
       ]
     },
@@ -291,7 +295,7 @@
           "id": "q1-response",
           "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location":"belowStimulus",
+          "location": "belowStimulus",
           "type": "slider",
           "options": [
             {
@@ -350,7 +354,7 @@
           "id": "q2-response",
           "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location":"belowStimulus",
+          "location": "belowStimulus",
           "type": "slider",
           "options": [
             {
@@ -409,7 +413,7 @@
           "id": "q3-response",
           "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location":"belowStimulus",
+          "location": "belowStimulus",
           "type": "slider",
           "options": [
             {
@@ -468,7 +472,7 @@
           "id": "q4-response",
           "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location":"belowStimulus",
+          "location": "belowStimulus",
           "type": "slider",
           "options": [
             {
@@ -709,7 +713,7 @@
           "id": "q5-response",
           "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location":"belowStimulus",
+          "location": "belowStimulus",
           "type": "slider",
           "options": [
             {
@@ -768,7 +772,7 @@
           "id": "q6-response",
           "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location":"belowStimulus",
+          "location": "belowStimulus",
           "type": "slider",
           "options": [
             {
@@ -827,7 +831,7 @@
           "id": "q7-response",
           "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location":"belowStimulus",
+          "location": "belowStimulus",
           "type": "slider",
           "options": [
             {
@@ -886,7 +890,7 @@
           "id": "q8-response",
           "prompt": "How correlated do you think the data looks?\n\n",
           "required": true,
-          "location":"belowStimulus",
+          "location": "belowStimulus",
           "type": "slider",
           "options": [
             {
@@ -1206,33 +1210,33 @@
       ]
     }
   },
-    "sequence": {
-      "order": "fixed",
-      "components": [
-        "introduction",
-        "introduction_2",
-        "instructions",
-        "understanding_test_1",
-        "understanding_test_2",
-        "understanding_test_3",
-        "intro_to_graphs",
-        "q1",
-        "q2",
-        "q3",
-        "q4",
-        "graph1",
-        "graph2",
-        "graph3",
-        "graph4",
-        "check_3",
-        "q5",
-        "q6",
-        "q7",
-        "q8",
-        "demographics",
-        "specific-added-questions",
-        "belief-questions",
-        "support-questions"
-      ]
-    }
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "introduction",
+      "introduction_2",
+      "instructions",
+      "understanding_test_1",
+      "understanding_test_2",
+      "understanding_test_3",
+      "intro_to_graphs",
+      "q1",
+      "q2",
+      "q3",
+      "q4",
+      "graph1",
+      "graph2",
+      "graph3",
+      "graph4",
+      "check_3",
+      "q5",
+      "q6",
+      "q7",
+      "q8",
+      "demographics",
+      "specific-added-questions",
+      "belief-questions",
+      "support-questions"
+    ]
   }
+}
